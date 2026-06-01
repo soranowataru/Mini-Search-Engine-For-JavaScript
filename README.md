@@ -218,7 +218,7 @@ Site Name Example A	https://A.example	test example	test site
 Site Name Example B	https://art.example.com	art illustration	Illustration site
 
 
-#更新
+# 更新
 
 update.jsを使うと、tsvに書いてあるURLをもとに、tsvをダウンロードして更新していきます。
 
