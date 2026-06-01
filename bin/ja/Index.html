@@ -1,0 +1,59 @@
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>ミニ検索エンジン</title>
+
+<style>
+
+body{
+    font-family:sans-serif;
+    margin:20px;
+}
+
+#results{
+    margin-top:20px;
+}
+
+.site{
+    border-bottom:1px solid #ccc;
+    padding:15px 0;
+}
+
+.site a{
+    font-size:1.2em;
+    text-decoration:none;
+}
+
+.desc{
+    margin-top:5px;
+    color:#444;
+}
+
+.engine{
+    margin-top:5px;
+    font-size:0.9em;
+    color:#888;
+}
+
+</style>
+</head>
+<body>
+
+<h1>ミニ検索エンジン</h1>
+
+<input
+    type="text"
+    id="searchBox"
+    placeholder="Search"
+    style="width:400px">
+
+<button id="searchButton">
+Search
+</button>
+
+<div id="results"></div>
+
+<script src="search.js"></script>
+
+</body>
+</html>
