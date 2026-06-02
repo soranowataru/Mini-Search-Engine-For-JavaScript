@@ -70,10 +70,23 @@ async function updateAll() {
             const newText =
                 await response.text();
 
+
+			if (
+   				 !newText.includes("#ENGINE=")
+			) {
+   				 throw new Error(
+       			 "Downloaded file is not a TSV"
+   			 	);
+			}
+
+
+
+
 			fs.copyFileSync(
    				 fullPath,
     				fullPath + ".bak"
 			);
+
 
             fs.writeFileSync(
                 fullPath,
