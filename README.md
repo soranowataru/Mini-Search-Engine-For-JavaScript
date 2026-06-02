@@ -124,12 +124,87 @@ The script will download updated TSV files and overwrite the local copies.
 
 
 
+# Update
+
+Using update.js, you can download and update TSV files based on the URLs written in them.
+
+update.js is Node.js code.
+
+For Windows environments, Node.js must be installed.
+
+With Node.js installed, you can run it in the console with:
+
+node update.js
 
 
+# Tutorial (Placing a search engine on the server)
+
+Download the contents of the "bin" folder in particular.
+
+The "en" folder is the English version, and the "ja" folder is the Japanese version.
+
+Let's edit the "data" folder locally.
+
+Create a file with a suitable name and the extension .tsv.
+
+Let's call it "test.tsv" for now.
+
+A .tsv file is simply a text file, and the character encoding is UTF-8 without BOM.
+
+"list.txt" is a list of TSV files in the data folder.
+
+Add "test.tsv" to a new line.
+
+Now, let's edit test.tsv.
+
+#ENGINE=Test
+
+#URL=
+
+Set this as follows:
+
+Enter the data you want to display in the search results in the following order, separated by a single tab:
+
+Site Name
+
+URL
+
+Search Term
+
+Description
 
 
+example:
 
-#日本語版
+github	https://github.com/	github	github top page
+
+A logical line is one entry. Continue entering other sites on separate lines.
+
+Rename the HTML file "index.html" to something other than "search.html" except when testing on localhost.
+
+
+Upload the contents of the edited "en" or "ja" folder to the server, and accessing the URL of search.html will make it function like a search engine.
+
+# Tutorial 2 (Updating TSV files with a tool)
+
+Download the contents of the "tool" folder.
+
+"en" is for English, "ja" is for Japanese.
+
+In your local environment, the TSV files in the "data" folder (located in the same folder as "update.js") will be used for automatic updates.
+
+With Node.js installed, run the following command in the console within the folder containing update.js:
+
+`node update.js`
+
+This will update all TSV files in the "data" folder (located in the same folder as update.js).
+
+The update check is not thorough, so some TSV files may be corrupted. If possible, perform a quick visual check of the TSV files.
+
+Replace the "data" folder (located in the same folder as update.js) with the "data" folder on your server.
+
+
+# 日本語版
 
 
 # 概要
@@ -231,6 +306,78 @@ Node.jsがインストールされている状態で、コンソールで
 node update.js
 
 で実行できます。
+
+
+# チュートリアル(サーバーへ検索エンジンを置く)
+
+特に「bin」の中身をダウンロードします。
+
+「en」フォルダは英語版、「ja」フォルダは日本語版です。
+
+ローカルで「data」フォルダを編集してみましょう。
+
+適当な名前で、拡張子tsvのファイルを作成します。
+
+ここでは仮に、「test.tsv」としましょう。
+
+tsvはただのテキストファイルで、文字コードはBOMなしUTF-8です。
+
+「list.txt」は、dataフォルダ内のtsvファイルのリストです。
+
+新しい行に「test.tsv」を追加しておきましょう。
+
+test.tsvの編集に入ります。
+
+#ENGINE=Test
+
+#URL=
+
+としておき、
+
+検索に表示したいデータを
+
+サイト名
+
+URL
+
+検索ワード
+
+説明
+
+の順にタブ1つで区切りながら入力します。
+
+例:
+
+github	https://github.com/?locale=ja	github	githubのトップページ
+
+論理行は、1エントリです。改行して、他のサイトを続けて入力していきます。
+
+HTMLの「index.html」は、ローカルホストのテスト時以外は違う名前に変えましょう。
+
+「search.html」などに変えます。
+
+編集済みの「en」または「ja」フォルダの中身をサーバーにアップロードし、search.htmlのURLにアクセスすれば検索エンジンのように機能します。
+
+
+# チュートリアル2(tsvをツールで更新する)
+
+「tool」フォルダの中身をダウンロードします。
+
+「en」は英語用、「ja」は日本語用です。
+
+ローカル環境で、「update.js」と同じフォルダにある、「data」フォルダ内のtsvファイルが自動更新の対象に使われます。
+
+Node.jsがインストールされている状態で、update.jsがあるフォルダ内でコンソールで
+
+node update.js
+
+で実行します。update.jsと同じフォルダにある「data」内のtsvが、すべて更新されます。
+
+更新時のチェックは甘いので、tsvが壊れているかもしれません。可能であれば、目視でtsvを簡単にチェックしておきましょう。
+
+update.jsと同じフォルダ内の「data」フォルダを、サーバーに置いた「data」フォルダと入れ替えましょう。
+
+
 
 
 
