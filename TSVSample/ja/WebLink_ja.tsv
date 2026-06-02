@@ -1,5 +1,4 @@
-#ENGINE=Web Link A
+#ENGINE=Web Link A(更新テスト済み)
 #URL=https://raw.github.com/soranowataru/Mini-Search-Engine-For-JavaScript/main/TSVSample/ja/WebLink_ja.tsv
-サイト1	https://A.example	検索ワード	説明欄
-サイト2	https://art.example.com	イラスト　お絵かき	イラストサイト
-サイト更新テスト	https://	更新テスト	ダウンロード後、更新に成功するとこのサイト情報が追加されます。
+空野わたるのgithubのページ	https://github.com/soranowataru	github	この検索エンジンのコードを配布しているページです。
+空野わたるの趣味のページ	https://soranowataru.ninja.salon/	趣味	空野わたるの趣味サイトです。
