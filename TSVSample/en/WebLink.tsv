@@ -1,5 +1,4 @@
-#ENGINE=Web Link A
+#ENGINE=Web Link A(Update test ver)
 #URL=https://raw.github.com/soranowataru/Mini-Search-Engine-For-JavaScript/main/TSVSample/en/WebLink.tsv
-Site Name Example A	https://A.example	test example	test site
-Site Name Example B	https://art.example.com	art illustration	Illustration site
-Update Test	https://	test	update test.
+Sorano Wataru's github page	https://github.com/soranowataru	github home page	Home page of this engine.
+Sorano Wataru's hobby page	https://soranowataru.ninja.salon/	hobby	Sorano Wataru's hobby web site.
