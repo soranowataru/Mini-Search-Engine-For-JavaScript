@@ -73,17 +73,20 @@ Encoding:
 UTF-8 (without BOM)
 
 
-### Header
 
-```text
-#ENGINE=
-```
+## Header Section
 
-Specifies the search engine name (for example, the name of the TSV file).
+The beginning of each line must start with the following word:
 
-```text
+### #ENGINE=
+
+The `#ENGINE=` field defines the name of this search engine (or dataset name).
+
+It needs to be the first line at the beginning of the file.
+
+### URL=
+
 #URL=
-```
 
 Specifies the URL of the TSV file used for updates.
 
@@ -98,13 +101,12 @@ Each entry contains four TAB-separated fields:
 
 Example:
 
-```tsv
 #ENGINE=Web Link A
 #URL=
 
 Site Name Example A	https://A.example	test example	test site
 Site Name Example B	https://art.example.com	art illustration	Illustration site
-```
+
 
 # Updating TSV Files
 
@@ -261,10 +263,12 @@ list.txtはそのフォルダにあるtsvのリストです。
 文字コードはUTF-8(BOMなし)です。
 
 開始部分:
+#で始まる文は、行の先頭から書く必要があります。
+
 
 #ENGINE=
 
-の部分には、検索エンジン名(TSVの名前など)を書きます。
+の部分には、検索エンジン名(TSVの名前など)を書きます。ファイルの1行目に書く必要があります。
 
 #URL=
 
