@@ -206,6 +206,37 @@ The update check is not thorough, so some TSV files may be corrupted. If possibl
 Replace the "data" folder (located in the same folder as update.js) with the "data" folder on your server.
 
 
+
+# Tutorial 3 (Providing a TSV to Others)
+
+You can publish a TSV file online so others can use it.
+
+In the entry section, enter the site information you want to use for the search engine.
+
+You can think of it as a link collection for websites.
+
+If you don't provide automatic updates,
+
+#URL=
+
+You can also leave #URL= blank.
+
+If you write #URL=, enter the URL of the published TSV file if you have one.
+
+During automatic updates, the TSV file will be re-retrieved from that URL.
+
+When you overwrite and rewrite the TSV file at that URL,
+
+the user who installed the TSV file can obtain the new, overwritten TSV file using an update tool.
+
+Alternatively, users can manually download the TSV file and update it themselves without using an automatic update tool.
+
+
+
+
+
+
+
 # 日本語版
 
 
@@ -381,6 +412,32 @@ node update.js
 
 update.jsと同じフォルダ内の「data」フォルダを、サーバーに置いた「data」フォルダと入れ替えましょう。
 
+
+# チュートリアル3(tsvを他人に提供する)
+
+tsvはネットで公開したりして、他の人が使えるようにすることができます。
+
+エントリの部分に検索エンジンの内容に使いたいサイト情報を入力します。
+
+webサイトのリンク集のようなものと考えてもかまいません。
+
+自動更新を提供しない場合、
+
+#URL=
+
+という風に、#URL=を空欄にすることもできます。
+
+#URL=を書く場合は、公開したtsvのURLがあれば、それを書きましょう。
+
+自動更新の際、そのURLからtsvが再取得されます。
+
+そのURLに置いてあるtsvを上書きして書き直した際、
+
+そのtsvを導入したユーザーは、更新ツールなどによって、上書きされた新しいtsvを取得できます。
+
+また、ユーザー側は、自動更新ツールを用いず、
+
+手動で自分でtsvをダウンロードしなおしてファイルを更新してもかまいません。
 
 
 
