@@ -139,6 +139,48 @@ With Node.js installed, you can run it in the console with:
 node update.js
 
 
+
+
+
+
+# Running Locally
+
+Because this project loads TSV files using JavaScript `fetch()`, opening `index.html` directly from the file system may not work in some browsers.
+
+Run a local web server instead.
+
+windows ver.
+
+## Python
+
+Open a command prompt in the project folder and run:
+
+python -m http.server 8000
+
+Then open:
+
+http://localhost:8000/
+
+Press Ctrl+C to stop the server.
+
+## Node.js
+
+Open a command prompt in the project folder and run:
+
+npx http-server
+
+or
+
+npx serve .
+
+Then open the URL shown in the console.
+
+
+If it doesn't work in PowerShell,try using
+
+npx.cmd serve .
+
+
 # Tutorial (Placing a search engine on the server)
 
 Download the contents of the "bin" folder in particular.
@@ -230,9 +272,6 @@ When you overwrite and rewrite the TSV file at that URL,
 the user who installed the TSV file can obtain the new, overwritten TSV file using an update tool.
 
 Alternatively, users can manually download the TSV file and update it themselves without using an automatic update tool.
-
-
-
 
 
 
@@ -341,6 +380,55 @@ Node.jsがインストールされている状態で、コンソールで
 node update.js
 
 で実行できます。
+
+
+
+
+
+# サーバーにアップロードせずhtmlを直接実行
+
+このプログラムではjavascriptのfetch()関数を使っているため、
+
+index.htmlをローカル環境で実行しても動作がブロックされます。
+
+ローカルホストで実行すると、自分をサーバーにしてhtmlを実行できるようになります。
+
+Windows環境下では次のようにします。PythonもNode.jsもインストールが必要です。
+
+
+## Python
+
+htmlを置いたフォルダで、コマンドプロンプトで次のようにします。
+
+python -m http.server 8000
+
+この状態で、ブラウザでURLの
+
+http://localhost:8000/
+
+にアクセスすると、コマンドプロンプトで指定したフォルダのindex.htmlが実行されます。
+
+サーバーをストップするにはコマンドプロンプトでCtrl+Cキーを押します。
+
+
+## Node.js
+
+プロジェクトのフォルダ内で、コマンドプロンプトを開き、
+
+npx http-server
+
+または
+
+npx serve .
+
+URLが示されるので、ブラウザでそこへアクセスします。
+
+power shellで動かない場合は、
+
+npx.cmd serve .
+
+とします。
+
 
 
 # チュートリアル(サーバーへ検索エンジンを置く)
