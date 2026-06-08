@@ -112,7 +112,7 @@ Site Name Example B	https://art.example.com	art illustration	Illustration site
 
 The `update.js` script reads the URLs stored in TSV files and downloads the latest versions automatically.
 
-`update.js` is written for Node.js.
+`update.js` is written for Node.js (v2.6.3.0).
 
 On Windows, Node.js must be installed before using the update tool.
 
@@ -371,7 +371,7 @@ Site Name Example B	https://art.example.com	art illustration	Illustration site
 
 update.jsを使うと、tsvに書いてあるURLをもとに、tsvをダウンロードして更新していきます。
 
-update.jsはNode.jsのコードです。
+update.jsはNode.jsのコードです。Node.jsのバージョンv2.6.3.0対応です。
 
 windows環境の場合、Node.jsのインストールが必要です。
 
